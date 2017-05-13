@@ -1,0 +1,23 @@
+body {
+	background-image: url("../images/romcoms.jpg")
+}
+
+.container {
+	background-color: white;
+}
+
+#start-area {
+	background-color: black;
+	color: #66ffff;
+}
+
+#start-game {
+	color: #ff6600;
+}
+
+.question {
+	display: none;
+	width: 400px;
+	align-content: center;
+
+}
