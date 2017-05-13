@@ -4,34 +4,128 @@
 	<meta charset="UTF-8">
 	<title>The Ultimate RomCom Trivia Game</title>
   <!-- Latest compiled and minified CSS -->
+ <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <!-- FontAwesome Icons -->
-  <script src="https://use.fontawesome.com/8750d391f1.js"></script>
-
-	<!--CSS file-->
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-
-
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
 </head>
-<header><h1>The Ultimate RomCom Trivia Game</h1></header>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center" id="start-area">
+        <h1>Welcome to The Ultimate RomCom Trivia Game</h1>
+        <h2>Click below to start playing!</h2>
+        <button id="start-game">Let's play!</button>
+      </div>
+    </div>
+    <div class="row question">
+      <div class="col-xs-12">
+        <h3>What year did the classic RomCom, "When Harry Met Sally", premiere?</h3>
+        <span class="clock"></span>
+        <form>
+          <input type="radio" name="question1" value="false"> 1990
+          <br>
+          <input type="radio" name="question1" value="false"> 1984
+          <br>
+          <input type="radio" name="question1" value="false"> 1993
+          <br>
+          <input type="radio" name="question1" value="true"> 1989
+        </form>
+        <button class="next">Next Question</button>
+      </div>
+    </div>
+    <div class="row question">
+      <div class="col-xs-12">
+        <h3>Who is Keith's (Eric Stoltz) dream girl in "Some Kind of Wonderful?</h3>
+        <span class="clock"></span>
+        <form>
+          <input type="radio" name="question2" value="true"> Amanda Jones
+          <br>
+          <input type="radio" name="question2" value="false"> Andie Walsh
+          <br>
+          <input type="radio" name="question2" value="false"> Samantha Baker
+          <br>
+          <input type="radio" name="question2" value="false"> Debbie Sullivan
+        </form>
+        <button class="next">Next Question</button>
+      </div>
+    </div>
+    <div class="row question">
+      <div class="col-xs-12">
+        <h3>In the 1998 film, "You've Got Mail, what is Kathleen's (Meg Ryan) AOL screen name??</h3>
+        <span class="clock"></span>
+        <form>
+          <input type="radio" name="question3" value="false"> Booklover
+          <br>
+          <input type="radio" name="question3" value="true"> Shopgirl
+          <br>
+          <input type="radio" name="question3" value="false"> Daisylover
+          <br>
+          <input type="radio" name="question3" value="false"> TwirlingGal
+        </form>
+        <button class="next">Next Question</button>
+      </div>
+    </div>
+    <div class="row question">
+      <div class="col-xs-12">
+        <h3>Which Jane Austen novel is the 1995 cult-classic, "Clueless", loosely based on??</h3>
+        <span class="clock"></span>
+        <form>
+          <input type="radio" name="question4" value="false"> Sense and Sensibility
+          <br>
+          <input type="radio" name="question4" value="false"> Persuasion
+          <br>
+          <input type="radio" name="question4" value="true"> Emma
+          <br>
+          <input type="radio" name="question4" value="false"> Mansfield Park
+        </form>
+        <button class="next">Next Question</button>
+      </div>
+    </div>
+    <div class="row question">
+      <div class="col-xs-12">
+        <h3>In which city does "10 Things I Hate About You" take place?</h3>
+        <span class="clock"></span>
+        <form>
+          <input type="radio" name="question5" value="false"> Portland
+          <br>
+          <input type="radio" name="question5" value="false"> Boston
+          <br>
+          <input type="radio" name="question5" value="true"> Seattle
+          <br>
+          <input type="radio" name="question5" value="false"> Chicago
+        </form>
+        <button class="next">Next Question</button>
+      </div>
+    </div>
+    <div class="row question">
+      <div class="col-xs-12">
+        <h3>In "Love, Actually" what language does Jamie (Colin Firth) propose to Aurelia (Sienna Guillory)?</h3>
+        <span class="clock"></span>
+        <form>
+          <input type="radio" name="question6" value="false"> Spanish
+          <br>
+          <input type="radio" name="question6" value="false"> English
+          <br>
+          <input type="radio" name="question6" value="false"> French
+          <br>
+          <input type="radio" name="question6" value="true"> Portugese
+        </form>
+        <button class="next">Next Question</button>
+      </div>
+    </div>
+    <div class="row question">
+      <div class="col-xs-12">
+	<h3>Results</h3>
+        <h3>Right Answers: <span id="right"></span></h3>
+        <h3>Wrong Answers: <span id="wrong"></span></h3>
+        <button id="restart">Play Again?</button>
+      </div>
+    </div>
+  </div>
 
-	<div>
-		<button class="start btn btn-primary">Click to start</button>
-	</div>
-	<div id="quiz-area">
-		<div class="timer"></div>
-		<div class="score"></div>
-		<div class="question"></div>
-		<div class="answer"></div>
-		<div id="demo"></div>
-		<div class="reset"></div>
-		<button class="resetbtn btn btn-warning">Restart the Trivia Game!</button>	
-	</div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
